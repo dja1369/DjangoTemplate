@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "djangopractice"
+version = "0.1.0"
+description = "Django Practice"
+authors = ["dja1369 <qjxlftn@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.6"
+django = "4.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
