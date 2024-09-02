@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l#gz1@!*x0&qt1q2w9&2!j4&p^vk+7r#ng^8m%srqgnp77oh08
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -84,7 +84,7 @@ DATABASES = {
 MONGODB_DATABASES = {
     "default": {
         "name": "database",
-        "host": "localhost",
+        "host": "mongodb",
         "username": "root",
         "password": "admin",
         "tz_aware": True, # if you using timezones in django (USE_TZ = True)
