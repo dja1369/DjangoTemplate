@@ -1,15 +1,14 @@
 # DjangoPractice
 
 ## Why
-    프로젝트에 도입하기전 fastapi와 Django에 대해 비교하기 위해 학습 
+    내가 쓰려고 만든 Django Rest Framework Template 
 
 ## Now
-    장고 관리자 사용법 까지 습득 완료.
+    폴더 구성중
 
-## refs
-    Django 공식 홈페이지,
-    Do It Django 책 
+## Refs
+    internet 
 
 ## TechStack
     Package Manager - Poetry 
-    Web Framework - Django
+    Web Framework - Django Rest p[Framework
