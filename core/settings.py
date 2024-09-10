@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,15 +81,22 @@ DATABASES = {
     }
 }
 
-MONGODB_DATABASES = {
-    "default": {
-        "name": "database",
-        "host": "mongodb",
-        "username": "root",
-        "password": "admin",
-        "tz_aware": True, # if you using timezones in django (USE_TZ = True)
-    },
-}
+# MongoDB
+from mongoengine import connect
+
+MONGO_DATABASE_NAME = "database"
+MONGO_HOST = "mongodb"
+MONGO_PORT = 27017
+MONGO_USER = "root"
+MONGO_PASSWORD = "admin"
+
+connect(
+    db=MONGO_DATABASE_NAME,
+    host=MONGO_HOST,
+    port=MONGO_PORT,
+    username=MONGO_USER,
+    password=MONGO_PASSWORD,
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -113,7 +120,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko'
 
 TIME_ZONE = 'UTC'
 
