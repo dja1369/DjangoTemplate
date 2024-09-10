@@ -1,4 +1,4 @@
-# DjangoPractice
+# DjangoTemplate
 
 ## Why
     내가 쓰려고 만든 Django Rest Framework Template 
